@@ -1,0 +1,88 @@
+<% include ./partials/header%>
+
+<div class="container contentpc">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <h2>Java Language Introduction</h2>
+      <p>Below given  program is the simplest program of Java printing “Hello World” to the screen. Let us try to understand every bit of code step by step.</p>
+      <div class="code">
+        <code>
+          /* This is a simple Java program.
+   FileName : "HelloWorld.java". */ <br>
+class HelloWorld <br>
+{<br>
+    // Your program begins with a call to main(). <br>
+    // Prints "Hello, World" to the terminal window. <br>
+    public static void main(String args[]) <br>
+    { <br>
+        System.out.println("Hello World"); <br>
+    } <br>
+} <br>
+
+        </code>
+        <p>Run on <a href="http://ideone.com/">IDE</a></p>
+       <p>Output:</p>
+       <p class="jumbotron">Hello world</p>
+      </div>
+      <div>
+        <p>The “Hello World!” program consists of three primary components: the HelloWorld class definition, the main method and source code comments. Following explanation will provide you with a basic understanding of the code:</p>
+         <p><span style="font-weight:700";"font-size25px">1.Class definition</span>This line uses the keyword class to declare that a new class is being defined</p>
+        <p class="jumbotron">class HelloWorld</p>
+        <p><span style="font-weight:700";"font-size25px">Hello world</span> is an identifier that is the name of the class. The entire class definition, including all of its members, will be between the opening curly brace  {  and the closing curly brace  } .</p>
+        <p><span style="font-weight:700";"font-size25px">2. Main method </span>In Java programming language, every application must contain a main method whose signature is:</p>
+        <p class="jumbotron">
+          public static void main(String[] args) <br>
+
+public: So that JVM can execute the method from anywhere.
+static: Main method is to be called without object.
+The modifiers public and static can be written in either order.
+void: The main method doesn't return anything.
+main(): Name configured in the JVM.
+String[]: The main method accepts a single argument:
+          an array of elements of type String.
+        </p>
+        <p>Like in C/C++, main method is the entry point for your application and will subsequently invoke all the other methods required by your program.</p>
+        <p>3.The next line of code is shown here. Notice that it occurs inside main( ).
+</p>
+<p class="jumbotron">
+  System.out.println("Hello World");
+</p><p>This line outputs the string “Hello World” followed by a new line on the screen. Output is actually accomplished by the built-in println( ) method. System is a predefined class that provides access to the system, and out is the variable of type output stream that is connected to the console.</p>
+<p>4.Comments: They can either be multi-line or single line comments.</p>
+<p class="jumbotron">
+  /* This is a simple Java program. <br>
+Call this file "HelloWorld.java". */
+</p>
+<p>This is a multiline comment. This type of comment must begin with /* and end with */. For single line you may directly use // as in C/C++.</p>
+  <div>
+    <p><span class="font-weight:700";"font-size25px">Important Points</span></p>
+   <ul>
+     <li>The name of the class defined by the program is HelloWorld, which is same as name of file(HelloWorld.java). This is not a coincidence. In Java, all codes must reside inside a class and there is at most one public class which contain main() method.</li>
+     <li>By convention, the name of the main class(class which contain main method) should match the name of the file that holds the program.
+  </li>
+   </ul>
+  </div>
+  <div>
+    <p><span class="font-weight:700";"font-size25px">Compiling the program </span></p>
+   <ul>
+     <li>After successfully setting up the environment, we can open terminal in both Windows/Unix and can go to directory where the file – HelloWorld.java is present.</li>
+     <li>Now, to compile the HelloWorld program, execute the compiler – javac , specifying the name of the source file on the command line, as shown:
+  </li>
+
+   <p class="jumbotron">javac HelloWorld.java </p>
+    <li>The compiler creates a file called HelloWorld.class (in present working directory) that contains the bytecode version of the program. Now, to execute our program, JVM(Java Virtual Machine) needs to be called using java, specifying the name of the class file on the command line, as shown:</li>
+    <p class="jumbotron">java HelloWorld</p>
+   </ul>
+   <p>
+     This will print “Hello, World” to the terminal screen.
+   </p>
+   <img class="alignnone size-full wp-image-160967" src="http://cdncontribute.geeksforgeeks.org/wp-content/uploads/Capture15.png" alt="Capture" width="686" height="312">
+  </div>
+  <hr>
+  <p>For further information <a href="https://www.geeksforgeeks.org/java/">https://www.geeksforgeeks.org/java/</a></p>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+<% include ./partials/footer%>

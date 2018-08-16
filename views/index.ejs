@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<h2 class="text-center">Here are some resume!!!!</h2>
+<div class="container">
+    <div class="row">
+        <% portals.forEach(function(portal){ %>
+        <div class="col-md-4">
+             <img src=" <%= portal.image %> "/>
+              <h4><%= portal.name %></h4>
+               <a class="btn btn-md btn-primary" href="/resume/<%= portal._id %>">Show More</a>
+        </div>
+        <% }); %>
+    </div>
+</div>
+   <div>
+   </div>
+
+
+<% include ./partials/footer %>

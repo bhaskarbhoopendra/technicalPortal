@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+ <div class="container">
+     <div class="row">
+         <div class="col-md-12">
+             <div class="form">
+                 <h1>Add new resume</h1>
+                 <form action="/resume" method="POST">
+                     <div class="form-group">
+                        <input class="form-control" type="text" name="resume[name]" placeholder="enter your name" required/> 
+                        <input class="form-control" type="text" name="resume[image]" placeholder="your profile image url" required/> 
+                        <input class="form-control" type="mail" name="resume[email]" placeholder="your email" required/> 
+                        <input class="form-control" type="text" name="resume[experience]" placeholder="your experience" required/> 
+                        <input class="form-control" type="text" name="resume[profile]" placeholder="your profile" required/> 
+                        <input class="form-control" type="text" name="resume[skills]" placeholder="your skills" required/> 
+                        <input class="form-control" type="text" name="resume[qualification]" placeholder="your qualification" required/> 
+                     </div>
+                     <input type="submit" class="btn btn-primary" value="submit" />
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
+<% include ./partials/footer %>

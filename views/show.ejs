@@ -1,0 +1,69 @@
+<% include ./partials/header %>
+ <div class="main">
+   <div class="delete">
+      <form action="/resume/<%= portal._id %>?_method=DELETE" method="POST">
+            <button class="btn btn-md btn-danger">Delete Resume</button>
+        </form>
+        <a style="margin-top:15px" class="btn btn-md btn-success" href="/resume/<%=portal._id%>/edit">Edit Resume</a>
+   </div>
+   
+  <div class="container">
+       
+      <div class="row">
+
+          <div class="col-md-4">
+            <img class="img-circle" src="<%= portal.image %>" alt="" height="250" width="250">
+          </div>
+          <div class="col-md-4">
+            <h1> <br> <span style="color:red">
+              <%= portal.name %>
+            </span> </h1>
+          </div>
+          <div class="col-md-4">
+            <div>
+              <p><span style="color:red">Email:</span><%= portal.email %></p>
+             
+            </div>
+          </div>
+
+
+    </div>
+    <div class="profile">
+    <h1 class="color">Profile</h1><hr class="scale">
+    <div class="data">
+      <p><%= portal.profile %></p>
+    </div>
+    </div>
+    <div class="profile">
+    <h1 class="color">Experience</h1><hr class="scale">
+    <div class="data">
+      <ul>
+        <li><%= portal.experience %></li>
+        
+      </ul>
+    </div>
+    </div>
+    <div class="profile">
+    <h1 class="color">Skills</h1><hr class="scale">
+    <div class="data">
+      <ul>
+        <li><%= portal.skills%></li>
+        
+      </ul>
+    </div>
+    </div>
+    <div class="profile">
+    <h1 class="color">Qualifications</h1><hr class="scale">
+    <div class="data">
+      <ul>
+        <li><%=portal.qualification%></li>
+        
+      </ul>
+    </div>
+    </div>
+
+  </div>
+
+
+</div>
+<% include ./partials/footer %>

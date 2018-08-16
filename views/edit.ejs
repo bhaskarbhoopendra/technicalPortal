@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+ <div class="container">
+     <div class="row">
+         <div class="col-md-12">
+             <div class="form">
+                 <h1>Edit your resume <%= portal.name%></h1>
+                 <form action="/resume/<%= portal._id %>?_method=PUT" method="POST">
+                     <div class="form-group">
+                        <input class="form-control" type="text" name="resume[name]" value="<%= portal.name %>" required/> 
+                        <input class="form-control" type="text" name="resume[image]" value="<%= portal.image %>"required/> 
+                        <input class="form-control" type="mail" name="resume[email]" value="<%= portal.email %>" required/> 
+                        <input class="form-control" type="text" name="resume[experience]" value="<%= portal.experience %>"required/> 
+                        <input class="form-control" type="text" name="resume[profile]" value="<%= portal.profile %>" required /> 
+                        <input class="form-control" type="text" name="resume[skills]" value="<%= portal.skills %>"required/> 
+                        <input class="form-control" type="text" name="resume[qualification]" value="<%= portal.qualification %>"required/> 
+                     </div>
+                     <input type="submit" class="btn btn-primary" value="submit" />
+                 </form>
+             </div>
+         </div>
+     </div>
+ </div>
+<% include ./partials/footer %>
